@@ -1,0 +1,9 @@
+/* Page-level defaults, all from tokens. */
+body {
+  margin: 0;
+  background: var(--color-surface-default);
+  color: var(--color-text-default);
+  font-family: var(--font-body-medium-family);
+  font-size: var(--font-body-medium-size);
+  line-height: var(--font-body-medium-line-height);
+}

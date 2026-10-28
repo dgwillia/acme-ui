@@ -1,0 +1,6 @@
+node_modules/
+dist/
+storybook-static/
+.sd-tmp/
+sync/to-figma.json
+*.log

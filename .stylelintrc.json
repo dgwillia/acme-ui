@@ -1,0 +1,14 @@
+{
+  "plugins": ["stylelint-declaration-strict-value"],
+  "ignoreFiles": ["src/styles/tokens.css"],
+  "rules": {
+    "scale-unlimited/declaration-strict-value": [
+      ["/color$/", "background", "background-color", "border-color", "fill", "stroke", "gap", "row-gap", "column-gap", "/^padding/", "/^margin/", "border-radius", "font-size", "line-height", "font-weight", "font-family"],
+      {
+        "ignoreValues": ["transparent", "inherit", "currentColor", "none", "0", "auto", "100%"],
+        "disableFix": true,
+        "message": "Use a design token (var(--…)) for \"${property}\", not the raw value \"${value}\". See DESIGN.md."
+      }
+    ]
+  }
+}

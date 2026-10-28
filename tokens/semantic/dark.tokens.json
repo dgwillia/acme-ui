@@ -1,0 +1,676 @@
+{
+  "color": {
+    "surface": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.slate.950}",
+        "$description": "Page background.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-surface-default)"
+            }
+          }
+        }
+      },
+      "raised": {
+        "$type": "color",
+        "$value": "{color.slate.900}",
+        "$description": "Cards, panels and anything above the page.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-surface-raised)"
+            }
+          }
+        }
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.slate.800}",
+        "$description": "Quiet backgrounds and hover state for secondary and ghost controls.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-surface-subtle)"
+            }
+          }
+        }
+      },
+      "interactive": {
+        "$type": "color",
+        "$value": "{color.emerald.400}",
+        "$description": "Primary action background. One primary action per view.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-surface-interactive)"
+            }
+          }
+        }
+      },
+      "interactive-hover": {
+        "$type": "color",
+        "$value": "{color.emerald.300}",
+        "$description": "Hover and pressed state of the primary action.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-surface-interactive-hover)"
+            }
+          }
+        }
+      },
+      "critical": {
+        "$type": "color",
+        "$value": "{color.red.500}",
+        "$description": "Destructive action background.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-surface-critical)"
+            }
+          }
+        }
+      },
+      "critical-hover": {
+        "$type": "color",
+        "$value": "{color.red.400}",
+        "$description": "Hover state of destructive actions.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-surface-critical-hover)"
+            }
+          }
+        }
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{color.slate.800}",
+        "$description": "Disabled controls.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-surface-disabled)"
+            }
+          }
+        }
+      },
+      "critical-subtle": {
+        "$type": "color",
+        "$value": "{color.red.950}",
+        "$description": "Error message backgrounds.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-surface-critical-subtle)"
+            }
+          }
+        }
+      },
+      "warning-subtle": {
+        "$type": "color",
+        "$value": "{color.amber.950}",
+        "$description": "Warning message backgrounds.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-surface-warning-subtle)"
+            }
+          }
+        }
+      },
+      "success-subtle": {
+        "$type": "color",
+        "$value": "{color.green.950}",
+        "$description": "Success message backgrounds.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-surface-success-subtle)"
+            }
+          }
+        }
+      },
+      "info-subtle": {
+        "$type": "color",
+        "$value": "{color.blue.950}",
+        "$description": "Informational message backgrounds.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-surface-info-subtle)"
+            }
+          }
+        }
+      }
+    },
+    "text": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.slate.50}",
+        "$description": "Body and heading text.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "TEXT_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-text-default)"
+            }
+          }
+        }
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "{color.slate.400}",
+        "$description": "Secondary text, table headers, help text.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "TEXT_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-text-muted)"
+            }
+          }
+        }
+      },
+      "on-interactive": {
+        "$type": "color",
+        "$value": "{color.slate.950}",
+        "$description": "Text on primary and critical action surfaces.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "TEXT_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-text-on-interactive)"
+            }
+          }
+        }
+      },
+      "interactive": {
+        "$type": "color",
+        "$value": "{color.emerald.300}",
+        "$description": "Links and ghost button labels.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "TEXT_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-text-interactive)"
+            }
+          }
+        }
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{color.slate.600}",
+        "$description": "Disabled control text.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "TEXT_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-text-disabled)"
+            }
+          }
+        }
+      },
+      "critical": {
+        "$type": "color",
+        "$value": "{color.red.400}",
+        "$description": "Error text and destructive ghost labels.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "TEXT_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-text-critical)"
+            }
+          }
+        }
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "{color.amber.300}",
+        "$description": "Warning text.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "TEXT_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-text-warning)"
+            }
+          }
+        }
+      },
+      "success": {
+        "$type": "color",
+        "$value": "{color.green.400}",
+        "$description": "Success text.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "TEXT_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-text-success)"
+            }
+          }
+        }
+      },
+      "info": {
+        "$type": "color",
+        "$value": "{color.blue.300}",
+        "$description": "Informational text.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "TEXT_FILL"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-text-info)"
+            }
+          }
+        }
+      }
+    },
+    "icon": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.slate.300}",
+        "$description": "Default icon colour.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "SHAPE_FILL",
+              "STROKE_COLOR"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-icon-default)"
+            }
+          }
+        }
+      },
+      "on-interactive": {
+        "$type": "color",
+        "$value": "{color.slate.950}",
+        "$description": "Icons on primary and critical surfaces.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "SHAPE_FILL",
+              "STROKE_COLOR"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-icon-on-interactive)"
+            }
+          }
+        }
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.slate.700}",
+        "$description": "Dividers, card and input borders.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "STROKE_COLOR"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-border-default)"
+            }
+          }
+        }
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{color.slate.500}",
+        "$description": "Secondary button and emphasised borders.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "STROKE_COLOR"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-border-strong)"
+            }
+          }
+        }
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{color.emerald.400}",
+        "$description": "Keyboard focus ring.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "STROKE_COLOR"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-border-focus)"
+            }
+          }
+        }
+      },
+      "critical": {
+        "$type": "color",
+        "$value": "{color.red.400}",
+        "$description": "Error state borders.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "STROKE_COLOR"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-border-critical)"
+            }
+          }
+        }
+      }
+    },
+    "data": {
+      "measured": {
+        "$type": "color",
+        "$value": "{color.emerald.400}",
+        "$description": "Values from metered or primary data. Never use for estimates.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-data-measured)"
+            }
+          }
+        }
+      },
+      "estimated": {
+        "$type": "color",
+        "$value": "{color.emerald.700}",
+        "$description": "Values from averages, proxies or estimates. Pair with pattern or label, not colour alone.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-data-estimated)"
+            }
+          }
+        }
+      },
+      "modelled": {
+        "$type": "color",
+        "$value": "{color.blue.400}",
+        "$description": "Forecasts and scenarios.",
+        "$extensions": {
+          "com.figma": {
+            "scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
+            ],
+            "codeSyntax": {
+              "WEB": "var(--color-data-modelled)"
+            }
+          }
+        }
+      }
+    }
+  },
+  "space": {
+    "xs": {
+      "$type": "dimension",
+      "$value": "{space.4}",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-xs)"
+          }
+        }
+      }
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "{space.8}",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-sm)"
+          }
+        }
+      }
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "{space.12}",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-md)"
+          }
+        }
+      }
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "{space.16}",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-lg)"
+          }
+        }
+      }
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "{space.24}",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-xl)"
+          }
+        }
+      }
+    },
+    "2xl": {
+      "$type": "dimension",
+      "$value": "{space.32}",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-2xl)"
+          }
+        }
+      }
+    },
+    "3xl": {
+      "$type": "dimension",
+      "$value": "{space.48}",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-3xl)"
+          }
+        }
+      }
+    },
+    "compact": {
+      "$type": "dimension",
+      "$value": "{space.8}",
+      "$description": "Layout gap for tightly related items: toolbars, field groups.",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-compact)"
+          }
+        }
+      }
+    },
+    "default": {
+      "$type": "dimension",
+      "$value": "{space.16}",
+      "$description": "Default layout gap between items in a Stack or Cluster.",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-default)"
+          }
+        }
+      }
+    },
+    "section": {
+      "$type": "dimension",
+      "$value": "{space.32}",
+      "$description": "Gap between page sections.",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-section)"
+          }
+        }
+      }
+    }
+  },
+  "radius": {
+    "control": {
+      "$type": "dimension",
+      "$value": "{radius.md}",
+      "$description": "Buttons, inputs, selects.",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--radius-control)"
+          }
+        }
+      }
+    },
+    "container": {
+      "$type": "dimension",
+      "$value": "{radius.lg}",
+      "$description": "Cards, dialogs, panels.",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--radius-container)"
+          }
+        }
+      }
+    },
+    "pill": {
+      "$type": "dimension",
+      "$value": "{radius.full}",
+      "$description": "Badges and tags.",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--radius-pill)"
+          }
+        }
+      }
+    }
+  }
+}

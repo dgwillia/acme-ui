@@ -1,0 +1,193 @@
+/* GENERATED FILE — do not edit. Source: /tokens (synced from Figma). Run `npm run tokens:build`. */
+:root {
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
+  --color-emerald-900: #064e3b;
+  --color-emerald-950: #022c22;
+  --color-red-50: #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-200: #fecaca;
+  --color-red-300: #fca5a5;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+  --color-red-800: #991b1b;
+  --color-red-900: #7f1d1d;
+  --color-red-950: #450a0a;
+  --color-amber-50: #fffbeb;
+  --color-amber-100: #fef3c7;
+  --color-amber-200: #fde68a;
+  --color-amber-300: #fcd34d;
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+  --color-amber-600: #d97706;
+  --color-amber-700: #b45309;
+  --color-amber-800: #92400e;
+  --color-amber-900: #78350f;
+  --color-amber-950: #451a03;
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-300: #86efac;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-green-800: #166534;
+  --color-green-900: #14532d;
+  --color-green-950: #052e16;
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+  --color-blue-950: #172554;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --space-0: 0px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --font-label-small-family: Inter,system-ui,sans-serif;
+  --font-label-small-weight: 600;
+  --font-label-small-size: 12px;
+  --font-label-small-line-height: 16px;
+  --font-label-medium-family: Inter,system-ui,sans-serif;
+  --font-label-medium-weight: 600;
+  --font-label-medium-size: 14px;
+  --font-label-medium-line-height: 20px;
+  --font-label-large-family: Inter,system-ui,sans-serif;
+  --font-label-large-weight: 600;
+  --font-label-large-size: 16px;
+  --font-label-large-line-height: 24px;
+  --font-body-medium-family: Inter,system-ui,sans-serif;
+  --font-body-medium-weight: 400;
+  --font-body-medium-size: 14px;
+  --font-body-medium-line-height: 20px;
+  --font-heading-medium-family: Inter,system-ui,sans-serif;
+  --font-heading-medium-weight: 600;
+  --font-heading-medium-size: 20px;
+  --font-heading-medium-line-height: 28px;
+  --color-surface-default: var(--color-white); /* Page background. */
+  --color-surface-raised: var(--color-white); /* Cards, panels and anything above the page. */
+  --color-surface-subtle: var(--color-slate-100); /* Quiet backgrounds and hover state for secondary and ghost controls. */
+  --color-surface-interactive: var(--color-emerald-700); /* Primary action background. One primary action per view. */
+  --color-surface-interactive-hover: var(--color-emerald-800); /* Hover and pressed state of the primary action. */
+  --color-surface-critical: var(--color-red-600); /* Destructive action background. */
+  --color-surface-critical-hover: var(--color-red-700); /* Hover state of destructive actions. */
+  --color-surface-disabled: var(--color-slate-100); /* Disabled controls. */
+  --color-surface-critical-subtle: var(--color-red-50); /* Error message backgrounds. */
+  --color-surface-warning-subtle: var(--color-amber-50); /* Warning message backgrounds. */
+  --color-surface-success-subtle: var(--color-green-50); /* Success message backgrounds. */
+  --color-surface-info-subtle: var(--color-blue-50); /* Informational message backgrounds. */
+  --color-text-default: var(--color-slate-900); /* Body and heading text. */
+  --color-text-muted: var(--color-slate-600); /* Secondary text, table headers, help text. */
+  --color-text-on-interactive: var(--color-white); /* Text on primary and critical action surfaces. */
+  --color-text-interactive: var(--color-emerald-700); /* Links and ghost button labels. */
+  --color-text-disabled: var(--color-slate-400); /* Disabled control text. */
+  --color-text-critical: var(--color-red-700); /* Error text and destructive ghost labels. */
+  --color-text-warning: var(--color-amber-800); /* Warning text. */
+  --color-text-success: var(--color-green-700); /* Success text. */
+  --color-text-info: var(--color-blue-700); /* Informational text. */
+  --color-icon-default: var(--color-slate-700); /* Default icon colour. */
+  --color-icon-on-interactive: var(--color-white); /* Icons on primary and critical surfaces. */
+  --color-border-default: var(--color-slate-200); /* Dividers, card and input borders. */
+  --color-border-strong: var(--color-slate-400); /* Secondary button and emphasised borders. */
+  --color-border-focus: var(--color-emerald-600); /* Keyboard focus ring. */
+  --color-border-critical: var(--color-red-600); /* Error state borders. */
+  --color-data-measured: var(--color-emerald-700); /* Values from metered or primary data. Never use for estimates. */
+  --color-data-estimated: var(--color-emerald-300); /* Values from averages, proxies or estimates. Pair with pattern or label, not colour alone. */
+  --color-data-modelled: var(--color-blue-400); /* Forecasts and scenarios. */
+  --radius-control: var(--radius-md); /* Buttons, inputs, selects. */
+  --radius-container: var(--radius-lg); /* Cards, dialogs, panels. */
+  --radius-pill: var(--radius-full); /* Badges and tags. */
+  --space-xs: var(--space-4);
+  --space-sm: var(--space-8);
+  --space-md: var(--space-12);
+  --space-lg: var(--space-16);
+  --space-xl: var(--space-24);
+  --space-2xl: var(--space-32);
+  --space-3xl: var(--space-48);
+  --space-compact: var(--space-8); /* Layout gap for tightly related items: toolbars, field groups. */
+  --space-default: var(--space-16); /* Default layout gap between items in a Stack or Cluster. */
+  --space-section: var(--space-32); /* Gap between page sections. */
+}
+
+[data-theme="dark"] {
+  --color-surface-default: var(--color-slate-950); /* Page background. */
+  --color-surface-raised: var(--color-slate-900); /* Cards, panels and anything above the page. */
+  --color-surface-subtle: var(--color-slate-800); /* Quiet backgrounds and hover state for secondary and ghost controls. */
+  --color-surface-interactive: var(--color-emerald-400); /* Primary action background. One primary action per view. */
+  --color-surface-interactive-hover: var(--color-emerald-300); /* Hover and pressed state of the primary action. */
+  --color-surface-critical: var(--color-red-500); /* Destructive action background. */
+  --color-surface-critical-hover: var(--color-red-400); /* Hover state of destructive actions. */
+  --color-surface-disabled: var(--color-slate-800); /* Disabled controls. */
+  --color-surface-critical-subtle: var(--color-red-950); /* Error message backgrounds. */
+  --color-surface-warning-subtle: var(--color-amber-950); /* Warning message backgrounds. */
+  --color-surface-success-subtle: var(--color-green-950); /* Success message backgrounds. */
+  --color-surface-info-subtle: var(--color-blue-950); /* Informational message backgrounds. */
+  --color-text-default: var(--color-slate-50); /* Body and heading text. */
+  --color-text-muted: var(--color-slate-400); /* Secondary text, table headers, help text. */
+  --color-text-on-interactive: var(--color-slate-950); /* Text on primary and critical action surfaces. */
+  --color-text-interactive: var(--color-emerald-300); /* Links and ghost button labels. */
+  --color-text-disabled: var(--color-slate-600); /* Disabled control text. */
+  --color-text-critical: var(--color-red-400); /* Error text and destructive ghost labels. */
+  --color-text-warning: var(--color-amber-300); /* Warning text. */
+  --color-text-success: var(--color-green-400); /* Success text. */
+  --color-text-info: var(--color-blue-300); /* Informational text. */
+  --color-icon-default: var(--color-slate-300); /* Default icon colour. */
+  --color-icon-on-interactive: var(--color-slate-950); /* Icons on primary and critical surfaces. */
+  --color-border-default: var(--color-slate-700); /* Dividers, card and input borders. */
+  --color-border-strong: var(--color-slate-500); /* Secondary button and emphasised borders. */
+  --color-border-focus: var(--color-emerald-400); /* Keyboard focus ring. */
+  --color-border-critical: var(--color-red-400); /* Error state borders. */
+  --color-data-measured: var(--color-emerald-400); /* Values from metered or primary data. Never use for estimates. */
+  --color-data-estimated: var(--color-emerald-700); /* Values from averages, proxies or estimates. Pair with pattern or label, not colour alone. */
+  --color-data-modelled: var(--color-blue-400); /* Forecasts and scenarios. */
+  --radius-control: var(--radius-md); /* Buttons, inputs, selects. */
+  --radius-container: var(--radius-lg); /* Cards, dialogs, panels. */
+  --radius-pill: var(--radius-full); /* Badges and tags. */
+  --space-xs: var(--space-4);
+  --space-sm: var(--space-8);
+  --space-md: var(--space-12);
+  --space-lg: var(--space-16);
+  --space-xl: var(--space-24);
+  --space-2xl: var(--space-32);
+  --space-3xl: var(--space-48);
+  --space-compact: var(--space-8); /* Layout gap for tightly related items: toolbars, field groups. */
+  --space-default: var(--space-16); /* Default layout gap between items in a Stack or Cluster. */
+  --space-section: var(--space-32); /* Gap between page sections. */
+}

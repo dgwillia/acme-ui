@@ -1,0 +1,7 @@
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.compact { gap: var(--space-compact); }
+.default { gap: var(--space-default); }

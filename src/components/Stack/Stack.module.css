@@ -1,0 +1,11 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  /* Reset list styles so Stack can render as <ul>/<ol>. */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.compact { gap: var(--space-compact); }
+.default { gap: var(--space-default); }
+.section { gap: var(--space-section); }
