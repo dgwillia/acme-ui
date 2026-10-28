@@ -16,7 +16,8 @@ export interface StackProps extends HTMLAttributes<HTMLElement> {
 
 /**
  * Vertical layout. All vertical spacing goes through Stack: no hand-written margins.
- * Figma: "Primitives/Stack" (gap = compact | default | section).
+ * Figma: no component. Use a vertical auto layout frame with gap bound to space/compact|default|section,
+ * named "Stack gap=…".
  */
 export function Stack({ gap = 'default', as: Tag = 'div', className, children, ...rest }: StackProps) {
   return (

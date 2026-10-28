@@ -74,6 +74,9 @@ Emerald is reserved for charts and figures of measured and estimated data (the `
 
 - **Layout:** `Page` (outer container), `Stack` (vertical) and `Cluster` (horizontal, wraps). Their `gap` is the
   only way spacing is applied between elements.
+  In Figma, Page and Card are components with a `content` slot (their `children`). Stack and Cluster are not
+  Figma components: use auto layout frames with the gap bound to a space token, named "Stack gap=…" or
+  "Cluster gap=…".
 - **Text:** `Text` with a `variant` (heading-medium, body-medium, label-*) and a `tone`.
 - **Containers:** `Card` for a raised group of related content.
 - **Actions:** `Button` (primary, secondary, ghost).
