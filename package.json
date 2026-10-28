@@ -6,7 +6,7 @@
   "description": "Acme UI — a small AI-ready design system proof of concept: Figma variables → DTCG tokens → CSS → React components → Storybook → agent-built screens.",
   "scripts": {
     "tokens:from-figma": "node sync/checksum.mjs && node sync/snapshot-to-tokens.mjs",
-    "tokens:to-figma": "node sync/tokens-to-snapshot.mjs",
+    "tokens:to-figma": "node sync/tokens-to-snapshot.mjs && node sync/diff-for-figma.mjs",
     "tokens:build": "node style-dictionary.config.mjs",
     "design-md:build": "node scripts/build-design-md.mjs",
     "build": "npm run tokens:build && npm run design-md:build && tsc --noEmit && vite build",

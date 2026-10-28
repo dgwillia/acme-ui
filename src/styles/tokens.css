@@ -131,7 +131,7 @@
   --color-data-measured: var(--color-emerald-700); /* Values from metered or primary data. Never use for estimates. */
   --color-data-estimated: var(--color-emerald-300); /* Values from averages, proxies or estimates. Pair with pattern or label, not colour alone. */
   --color-data-modelled: var(--color-blue-400); /* Forecasts and scenarios. */
-  --radius-control: var(--radius-md); /* Buttons, inputs, selects. */
+  --radius-control: var(--radius-full); /* Buttons, inputs, selects. Fully rounded (pill) controls. */
   --radius-container: var(--radius-lg); /* Cards, dialogs, panels. */
   --radius-pill: var(--radius-full); /* Badges and tags. */
   --space-xs: var(--space-4);
@@ -177,7 +177,7 @@
   --color-data-measured: var(--color-emerald-400); /* Values from metered or primary data. Never use for estimates. */
   --color-data-estimated: var(--color-emerald-700); /* Values from averages, proxies or estimates. Pair with pattern or label, not colour alone. */
   --color-data-modelled: var(--color-blue-400); /* Forecasts and scenarios. */
-  --radius-control: var(--radius-md); /* Buttons, inputs, selects. */
+  --radius-control: var(--radius-full); /* Buttons, inputs, selects. Fully rounded (pill) controls. */
   --radius-container: var(--radius-lg); /* Cards, dialogs, panels. */
   --radius-pill: var(--radius-full); /* Badges and tags. */
   --space-xs: var(--space-4);

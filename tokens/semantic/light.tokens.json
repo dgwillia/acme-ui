@@ -629,8 +629,8 @@
   "radius": {
     "control": {
       "$type": "dimension",
-      "$value": "{radius.md}",
-      "$description": "Buttons, inputs, selects.",
+      "$value": "{radius.full}",
+      "$description": "Buttons, inputs, selects. Fully rounded (pill) controls.",
       "$extensions": {
         "com.figma": {
           "scopes": [

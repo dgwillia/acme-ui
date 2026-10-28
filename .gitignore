@@ -4,3 +4,5 @@ storybook-static/
 .sd-tmp/
 sync/to-figma.json
 *.log
+sync/to-figma.diff.json
+sync/expected-figma-snapshot.json
