@@ -687,5 +687,22 @@
         }
       }
     }
+  },
+  "border-width": {
+    "default": {
+      "$type": "dimension",
+      "$value": "{border-width.1}",
+      "$description": "Default border width for controls and containers (Button, Card, inputs).",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "STROKE_FLOAT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--border-width-default)"
+          }
+        }
+      }
+    }
   }
 }

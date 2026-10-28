@@ -2,11 +2,12 @@
 // hand-written rationale alone. CI fails if DESIGN.md is out of date.
 //
 // Usage: npm run design-md:build
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 
 const read = p => JSON.parse(readFileSync(p, 'utf8'));
 const prims = {};
-for (const f of ['color', 'space', 'radius']) {
+const fams = readdirSync('tokens/primitives').filter(f => f.endsWith('.tokens.json') && f !== 'typography.tokens.json').map(f => f.replace('.tokens.json', ''));
+for (const f of fams) {
   (function walk(t, path) {
     for (const [k, v] of Object.entries(t)) {
       if (k.startsWith('$')) continue;
@@ -42,6 +43,8 @@ const yaml = [
   ...light.filter(t => t.name.startsWith('space.')).map(t => `  ${t.name.slice(6)}: ${t.value}`),
   'radius:',
   ...light.filter(t => t.name.startsWith('radius.')).map(t => `  ${t.name.slice(7)}: ${t.value}`),
+  'border-width:',
+  ...light.filter(t => t.name.startsWith('border-width.')).map(t => `  ${t.name.slice(13)}: ${t.value}`),
   'typography:',
   ...Object.entries(typo).map(([k, v]) => `  ${k}: { family: "${v.family.$value[0]}", weight: ${v.weight.$value}, size: ${v.size.$value.value}px, line-height: ${v['line-height'].$value.value}px }`),
 ].join('\n');

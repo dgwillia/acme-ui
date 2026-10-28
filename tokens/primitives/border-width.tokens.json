@@ -1,0 +1,19 @@
+{
+  "border-width": {
+    "1": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1,
+        "unit": "px"
+      },
+      "$extensions": {
+        "com.figma": {
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--border-width-1)"
+          }
+        }
+      }
+    }
+  }
+}

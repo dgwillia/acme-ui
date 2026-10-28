@@ -27,7 +27,7 @@ export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement
  *
  * Figma: "Button" component set (variant × size × disabled; label, loading, leadingIcon).
  * Tokens: color.surface.interactive, color.text.on-interactive, color.border.strong,
- * radius.control, space.*, font.label-*.
+ * radius.control, border-width.default, space.*, font.label-*.
  */
 export function Button({
   variant = 'primary',

@@ -1,5 +1,6 @@
 /* GENERATED FILE — do not edit. Source: /tokens (synced from Figma). Run `npm run tokens:build`. */
 :root {
+  --border-width-1: 1px;
   --color-slate-50: #f8fafc;
   --color-slate-100: #f1f5f9;
   --color-slate-200: #e2e8f0;
@@ -113,6 +114,7 @@
   --font-heading-medium-weight: 600;
   --font-heading-medium-size: 20px;
   --font-heading-medium-line-height: 28px;
+  --border-width-default: var(--border-width-1); /* Default border width for controls and containers (Button, Card, inputs). */
   --color-surface-default: var(--color-white); /* Page background. */
   --color-surface-raised: var(--color-white); /* Cards, panels and anything above the page. */
   --color-surface-subtle: var(--color-slate-100); /* Quiet backgrounds and hover state for secondary and ghost controls. */
@@ -160,6 +162,7 @@
 }
 
 [data-theme="dark"] {
+  --border-width-default: var(--border-width-1); /* Default border width for controls and containers (Button, Card, inputs). */
   --color-surface-default: var(--color-slate-950); /* Page background. */
   --color-surface-raised: var(--color-slate-900); /* Cards, panels and anything above the page. */
   --color-surface-subtle: var(--color-slate-800); /* Quiet backgrounds and hover state for secondary and ghost controls. */

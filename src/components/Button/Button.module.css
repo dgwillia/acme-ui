@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  border: 1px solid transparent;
+  border: var(--border-width-default) solid transparent;
   border-radius: var(--radius-control);
   font-family: var(--font-label-medium-family);
   font-weight: var(--font-label-medium-weight);
