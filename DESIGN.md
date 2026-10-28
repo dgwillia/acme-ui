@@ -66,7 +66,7 @@ The token section above and the table below are **generated** from `/tokens`
 
 Calm, precise, evidence-first. Dense but never cramped: analysts scan, executives skim.
 Blue is the brand colour and signals action. It is never decoration.
-Emerald is reserved for data: measured and estimated values.
+Emerald is reserved for charts and figures of measured and estimated data (the `color.data.*` tokens).
 
 ## Building blocks
 
@@ -87,13 +87,19 @@ Emerald is reserved for data: measured and estimated values.
 ## Status
 
 - One tone per meaning, everywhere: `critical` overdue, failed or blocked; `warning` needs attention soon;
-  `success` done or verified; `info` in progress; `neutral` everything else.
+  `success` done or verified; `info` informational; `neutral` everything else, including pending.
 - A Badge labels a status. It is not a button or a link.
+- Badge text must make sense read on its own, because screen readers and scanning eyes meet it out of context:
+  "Estimated data", "Request sent", "Supplier replied"; not "Estimated" or "Replied".
+- `info` is for informational messages, not for statuses that sit next to actions (it reads as clickable).
+  Use `neutral` for a pending status such as "Request sent".
 
 ## Data and uncertainty (non-negotiable)
 
 - Never show an estimated value styled as if it were measured.
 - `color.data.estimated` must always be paired with a label or pattern, never colour alone.
+- `color.data.*` tokens are for charts and figures only. A data-quality status label uses Badge tones:
+  measured → `success` ("Measured data"), estimated → `warning` ("Estimated data").
 - Always state the unit and the period ("1,240 tCO2e · Q3").
 
 ## Voice

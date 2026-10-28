@@ -10,13 +10,13 @@ interface Supplier { id: string; name: string; category: string; emissions: numb
 
 // Status → Badge tone, following the tone meanings in DESIGN.md and the Badge docs.
 const QUALITY: Record<Quality, { tone: BadgeProps['tone']; label: string }> = {
-  measured: { tone: 'success', label: 'Measured' },
-  estimated: { tone: 'warning', label: 'Estimated' },
+  measured: { tone: 'success', label: 'Measured data' },
+  estimated: { tone: 'warning', label: 'Estimated data' },
 };
 const REQUEST: Record<RequestStatus, { tone: BadgeProps['tone']; label: string }> = {
   'not-requested': { tone: 'neutral', label: 'Not requested' },
-  sent: { tone: 'info', label: 'Request sent' },
-  replied: { tone: 'success', label: 'Replied' },
+  sent: { tone: 'neutral', label: 'Request sent' },
+  replied: { tone: 'success', label: 'Supplier replied' },
 };
 
 const SUPPLIERS: Supplier[] = [

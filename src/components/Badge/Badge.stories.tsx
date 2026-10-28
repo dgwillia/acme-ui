@@ -20,10 +20,12 @@ type Story = StoryObj<typeof meta>;
 
 /** Default tone for anything without a status meaning. */
 export const Neutral: Story = {};
-/** In progress or informational. */
-export const Info: Story = { args: { tone: 'info', children: 'Awaiting reply' } };
+/** Pending statuses use neutral, not info. */
+export const Pending: Story = { args: { tone: 'neutral', children: 'Request sent' } };
+/** Informational messages. Not next to actions: it reads as clickable. */
+export const Info: Story = { args: { tone: 'info', children: 'Method updated' } };
 /** Done or verified. */
-export const Success: Story = { args: { tone: 'success', children: 'Received' } };
+export const Success: Story = { args: { tone: 'success', children: 'Supplier replied' } };
 /** Needs attention soon. */
 export const Warning: Story = { args: { tone: 'warning', children: 'Due soon' } };
 /** Overdue, failed or blocked. */
@@ -36,8 +38,8 @@ export const AllTones: Story = {
   render: args => (
     <Cluster gap="compact">
       <Badge {...args} tone="neutral">Draft</Badge>
-      <Badge {...args} tone="info">Awaiting reply</Badge>
-      <Badge {...args} tone="success">Received</Badge>
+      <Badge {...args} tone="info">Method updated</Badge>
+      <Badge {...args} tone="success">Supplier replied</Badge>
       <Badge {...args} tone="warning">Due soon</Badge>
       <Badge {...args} tone="critical">Overdue</Badge>
     </Cluster>

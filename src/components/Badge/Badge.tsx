@@ -4,16 +4,19 @@ import styles from './Badge.module.css';
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   /**
    * Meaning of the status. One tone per meaning, used consistently:
-   * - `neutral`: everything else (draft, not started, n/a).
-   * - `info`: in progress or informational (awaiting reply).
-   * - `success`: done or verified (received, measured).
-   * - `warning`: needs attention soon (due soon, estimated).
+   * - `neutral`: everything else, including pending statuses (draft, request sent).
+   * - `info`: informational messages. Not next to actions: it reads as clickable. Use `neutral` for pending statuses.
+   * - `success`: done or verified (supplier replied, measured data).
+   * - `warning`: needs attention soon (due soon, estimated data).
    * - `critical`: overdue, failed or blocked.
    */
   tone?: 'neutral' | 'info' | 'success' | 'warning' | 'critical';
   /** Optional icon shown before the label. Sized to the text (12px). Decorative only. */
   leadingIcon?: ReactNode;
-  /** The label. Always required: colour is never the only signal. Sentence case, one or two words. */
+  /**
+   * The label. Always required: colour is never the only signal. Sentence case, two or three words
+   * that make sense read on their own ("Estimated data", not "Estimated").
+   */
   children: ReactNode;
 }
 
