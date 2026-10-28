@@ -104,8 +104,8 @@
   --color-surface-default: var(--color-white); /* Page background. */
   --color-surface-raised: var(--color-white); /* Cards, panels and anything above the page. */
   --color-surface-subtle: var(--color-slate-100); /* Quiet backgrounds and hover state for secondary and ghost controls. */
-  --color-surface-interactive: var(--color-emerald-700); /* Primary action background. One primary action per view. */
-  --color-surface-interactive-hover: var(--color-emerald-800); /* Hover and pressed state of the primary action. */
+  --color-surface-interactive: var(--color-blue-700); /* Primary action background. One primary action per view. */
+  --color-surface-interactive-hover: var(--color-blue-800); /* Hover and pressed state of the primary action. */
   --color-surface-critical: var(--color-red-600); /* Destructive action background. */
   --color-surface-critical-hover: var(--color-red-700); /* Hover state of destructive actions. */
   --color-surface-disabled: var(--color-slate-100); /* Disabled controls. */
@@ -116,7 +116,7 @@
   --color-text-default: var(--color-slate-900); /* Body and heading text. */
   --color-text-muted: var(--color-slate-600); /* Secondary text, table headers, help text. */
   --color-text-on-interactive: var(--color-white); /* Text on primary and critical action surfaces. */
-  --color-text-interactive: var(--color-emerald-700); /* Links and ghost button labels. */
+  --color-text-interactive: var(--color-blue-700); /* Links and ghost button labels. */
   --color-text-disabled: var(--color-slate-400); /* Disabled control text. */
   --color-text-critical: var(--color-red-700); /* Error text and destructive ghost labels. */
   --color-text-warning: var(--color-amber-800); /* Warning text. */
@@ -126,7 +126,7 @@
   --color-icon-on-interactive: var(--color-white); /* Icons on primary and critical surfaces. */
   --color-border-default: var(--color-slate-200); /* Dividers, card and input borders. */
   --color-border-strong: var(--color-slate-400); /* Secondary button and emphasised borders. */
-  --color-border-focus: var(--color-emerald-600); /* Keyboard focus ring. */
+  --color-border-focus: var(--color-blue-600); /* Keyboard focus ring. */
   --color-border-critical: var(--color-red-600); /* Error state borders. */
   --color-data-measured: var(--color-emerald-700); /* Values from metered or primary data. Never use for estimates. */
   --color-data-estimated: var(--color-emerald-300); /* Values from averages, proxies or estimates. Pair with pattern or label, not colour alone. */
@@ -150,8 +150,8 @@
   --color-surface-default: var(--color-slate-950); /* Page background. */
   --color-surface-raised: var(--color-slate-900); /* Cards, panels and anything above the page. */
   --color-surface-subtle: var(--color-slate-800); /* Quiet backgrounds and hover state for secondary and ghost controls. */
-  --color-surface-interactive: var(--color-emerald-400); /* Primary action background. One primary action per view. */
-  --color-surface-interactive-hover: var(--color-emerald-300); /* Hover and pressed state of the primary action. */
+  --color-surface-interactive: var(--color-blue-400); /* Primary action background. One primary action per view. */
+  --color-surface-interactive-hover: var(--color-blue-300); /* Hover and pressed state of the primary action. */
   --color-surface-critical: var(--color-red-500); /* Destructive action background. */
   --color-surface-critical-hover: var(--color-red-400); /* Hover state of destructive actions. */
   --color-surface-disabled: var(--color-slate-800); /* Disabled controls. */
@@ -162,7 +162,7 @@
   --color-text-default: var(--color-slate-50); /* Body and heading text. */
   --color-text-muted: var(--color-slate-400); /* Secondary text, table headers, help text. */
   --color-text-on-interactive: var(--color-slate-950); /* Text on primary and critical action surfaces. */
-  --color-text-interactive: var(--color-emerald-300); /* Links and ghost button labels. */
+  --color-text-interactive: var(--color-blue-300); /* Links and ghost button labels. */
   --color-text-disabled: var(--color-slate-600); /* Disabled control text. */
   --color-text-critical: var(--color-red-400); /* Error text and destructive ghost labels. */
   --color-text-warning: var(--color-amber-300); /* Warning text. */
@@ -172,7 +172,7 @@
   --color-icon-on-interactive: var(--color-slate-950); /* Icons on primary and critical surfaces. */
   --color-border-default: var(--color-slate-700); /* Dividers, card and input borders. */
   --color-border-strong: var(--color-slate-500); /* Secondary button and emphasised borders. */
-  --color-border-focus: var(--color-emerald-400); /* Keyboard focus ring. */
+  --color-border-focus: var(--color-blue-400); /* Keyboard focus ring. */
   --color-border-critical: var(--color-red-400); /* Error state borders. */
   --color-data-measured: var(--color-emerald-400); /* Values from metered or primary data. Never use for estimates. */
   --color-data-estimated: var(--color-emerald-700); /* Values from averages, proxies or estimates. Pair with pattern or label, not colour alone. */

@@ -4,8 +4,8 @@ colors:
   surface-default: { light: "#ffffff", dark: "#020617" }
   surface-raised: { light: "#ffffff", dark: "#0f172a" }
   surface-subtle: { light: "#f1f5f9", dark: "#1e293b" }
-  surface-interactive: { light: "#047857", dark: "#34d399" }
-  surface-interactive-hover: { light: "#065f46", dark: "#6ee7b7" }
+  surface-interactive: { light: "#1d4ed8", dark: "#60a5fa" }
+  surface-interactive-hover: { light: "#1e40af", dark: "#93c5fd" }
   surface-critical: { light: "#dc2626", dark: "#ef4444" }
   surface-critical-hover: { light: "#b91c1c", dark: "#f87171" }
   surface-disabled: { light: "#f1f5f9", dark: "#1e293b" }
@@ -16,7 +16,7 @@ colors:
   text-default: { light: "#0f172a", dark: "#f8fafc" }
   text-muted: { light: "#475569", dark: "#94a3b8" }
   text-on-interactive: { light: "#ffffff", dark: "#020617" }
-  text-interactive: { light: "#047857", dark: "#6ee7b7" }
+  text-interactive: { light: "#1d4ed8", dark: "#93c5fd" }
   text-disabled: { light: "#94a3b8", dark: "#475569" }
   text-critical: { light: "#b91c1c", dark: "#f87171" }
   text-warning: { light: "#92400e", dark: "#fcd34d" }
@@ -26,7 +26,7 @@ colors:
   icon-on-interactive: { light: "#ffffff", dark: "#020617" }
   border-default: { light: "#e2e8f0", dark: "#334155" }
   border-strong: { light: "#94a3b8", dark: "#64748b" }
-  border-focus: { light: "#059669", dark: "#34d399" }
+  border-focus: { light: "#2563eb", dark: "#60a5fa" }
   border-critical: { light: "#dc2626", dark: "#f87171" }
   data-measured: { light: "#047857", dark: "#34d399" }
   data-estimated: { light: "#6ee7b7", dark: "#047857" }
@@ -107,8 +107,8 @@ never "OK" or "Submit". No exclamation marks.
 | `var(--color-surface-default)` | #ffffff | #020617 | Page background. |
 | `var(--color-surface-raised)` | #ffffff | #0f172a | Cards, panels and anything above the page. |
 | `var(--color-surface-subtle)` | #f1f5f9 | #1e293b | Quiet backgrounds and hover state for secondary and ghost controls. |
-| `var(--color-surface-interactive)` | #047857 | #34d399 | Primary action background. One primary action per view. |
-| `var(--color-surface-interactive-hover)` | #065f46 | #6ee7b7 | Hover and pressed state of the primary action. |
+| `var(--color-surface-interactive)` | #1d4ed8 | #60a5fa | Primary action background. One primary action per view. |
+| `var(--color-surface-interactive-hover)` | #1e40af | #93c5fd | Hover and pressed state of the primary action. |
 | `var(--color-surface-critical)` | #dc2626 | #ef4444 | Destructive action background. |
 | `var(--color-surface-critical-hover)` | #b91c1c | #f87171 | Hover state of destructive actions. |
 | `var(--color-surface-disabled)` | #f1f5f9 | #1e293b | Disabled controls. |
@@ -119,7 +119,7 @@ never "OK" or "Submit". No exclamation marks.
 | `var(--color-text-default)` | #0f172a | #f8fafc | Body and heading text. |
 | `var(--color-text-muted)` | #475569 | #94a3b8 | Secondary text, table headers, help text. |
 | `var(--color-text-on-interactive)` | #ffffff | #020617 | Text on primary and critical action surfaces. |
-| `var(--color-text-interactive)` | #047857 | #6ee7b7 | Links and ghost button labels. |
+| `var(--color-text-interactive)` | #1d4ed8 | #93c5fd | Links and ghost button labels. |
 | `var(--color-text-disabled)` | #94a3b8 | #475569 | Disabled control text. |
 | `var(--color-text-critical)` | #b91c1c | #f87171 | Error text and destructive ghost labels. |
 | `var(--color-text-warning)` | #92400e | #fcd34d | Warning text. |
@@ -129,7 +129,7 @@ never "OK" or "Submit". No exclamation marks.
 | `var(--color-icon-on-interactive)` | #ffffff | #020617 | Icons on primary and critical surfaces. |
 | `var(--color-border-default)` | #e2e8f0 | #334155 | Dividers, card and input borders. |
 | `var(--color-border-strong)` | #94a3b8 | #64748b | Secondary button and emphasised borders. |
-| `var(--color-border-focus)` | #059669 | #34d399 | Keyboard focus ring. |
+| `var(--color-border-focus)` | #2563eb | #60a5fa | Keyboard focus ring. |
 | `var(--color-border-critical)` | #dc2626 | #f87171 | Error state borders. |
 | `var(--color-data-measured)` | #047857 | #34d399 | Values from metered or primary data. Never use for estimates. |
 | `var(--color-data-estimated)` | #6ee7b7 | #047857 | Values from averages, proxies or estimates. Pair with pattern or label, not colour alone. |

@@ -51,7 +51,7 @@
       },
       "interactive": {
         "$type": "color",
-        "$value": "{color.emerald.700}",
+        "$value": "{color.blue.700}",
         "$description": "Primary action background. One primary action per view.",
         "$extensions": {
           "com.figma": {
@@ -67,7 +67,7 @@
       },
       "interactive-hover": {
         "$type": "color",
-        "$value": "{color.emerald.800}",
+        "$value": "{color.blue.800}",
         "$description": "Hover and pressed state of the primary action.",
         "$extensions": {
           "com.figma": {
@@ -242,7 +242,7 @@
       },
       "interactive": {
         "$type": "color",
-        "$value": "{color.emerald.700}",
+        "$value": "{color.blue.700}",
         "$description": "Links and ghost button labels.",
         "$extensions": {
           "com.figma": {
@@ -398,7 +398,7 @@
       },
       "focus": {
         "$type": "color",
-        "$value": "{color.emerald.600}",
+        "$value": "{color.blue.600}",
         "$description": "Keyboard focus ring.",
         "$extensions": {
           "com.figma": {
