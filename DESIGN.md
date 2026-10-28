@@ -75,6 +75,7 @@ Emerald is reserved for data: measured and estimated values.
 - **Text:** `Text` with a `variant` (heading-medium, body-medium, label-*) and a `tone`.
 - **Containers:** `Card` for a raised group of related content.
 - **Actions:** `Button` (primary, secondary, ghost).
+- **Status:** `Badge` with a `tone` (neutral, info, success, warning, critical). Always has a text label; never clickable.
 
 ## Hierarchy
 
@@ -82,6 +83,12 @@ Emerald is reserved for data: measured and estimated values.
 - Numbers are the hero; labels support them. Use `label-small` + `muted` for captions.
 - `space.section` between page sections, `space.default` inside a group,
   `space.compact` for tightly related items.
+
+## Status
+
+- One tone per meaning, everywhere: `critical` overdue, failed or blocked; `warning` needs attention soon;
+  `success` done or verified; `info` in progress; `neutral` everything else.
+- A Badge labels a status. It is not a button or a link.
 
 ## Data and uncertainty (non-negotiable)
 

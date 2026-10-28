@@ -13,7 +13,7 @@ Tokens are synced from Figma; components mirror the Figma library one to one.
 ## Hard rules
 - Never hallucinate component props. If a prop is not in the Storybook docs, it does not exist.
   Ask, or propose the change to the system in a separate pull request.
-- Build screens only from `@acme/ui` exports: `Page`, `Stack`, `Cluster`, `Text`, `Card`, `Button`.
+- Build screens only from `@acme/ui` exports: `Page`, `Stack`, `Cluster`, `Text`, `Card`, `Button`, `Badge`.
   Import from the package entry (`src/index.ts`), never from component internals.
 - All layout uses `Stack` or `Cluster`. No margins, no inline `style`, no ad-hoc flex containers.
 - No raw colours, spacing, radii or font values anywhere. Lint enforces this.
