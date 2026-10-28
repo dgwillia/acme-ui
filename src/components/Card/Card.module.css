@@ -4,3 +4,6 @@
   border-radius: var(--radius-container);
   padding: var(--space-xl);
 }
+
+/* CI test: deliberately breaks the rules */
+.ciTest { color: #ff0000; padding: 12px; }
