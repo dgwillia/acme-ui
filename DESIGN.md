@@ -12,7 +12,7 @@ colors:
   surface-critical-subtle: { light: "#fef2f2", dark: "#450a0a" }
   surface-warning-subtle: { light: "#fffbeb", dark: "#451a03" }
   surface-success-subtle: { light: "#f0fdf4", dark: "#052e16" }
-  surface-info-subtle: { light: "#eff6ff", dark: "#172554" }
+  surface-info-subtle: { light: "#f5f3ff", dark: "#2e1065" }
   text-default: { light: "#0f172a", dark: "#f8fafc" }
   text-muted: { light: "#475569", dark: "#94a3b8" }
   text-on-interactive: { light: "#ffffff", dark: "#020617" }
@@ -21,7 +21,7 @@ colors:
   text-critical: { light: "#b91c1c", dark: "#f87171" }
   text-warning: { light: "#92400e", dark: "#fcd34d" }
   text-success: { light: "#15803d", dark: "#4ade80" }
-  text-info: { light: "#1d4ed8", dark: "#93c5fd" }
+  text-info: { light: "#6d28d9", dark: "#c4b5fd" }
   icon-default: { light: "#334155", dark: "#cbd5e1" }
   icon-on-interactive: { light: "#ffffff", dark: "#020617" }
   border-default: { light: "#e2e8f0", dark: "#334155" }
@@ -130,7 +130,7 @@ never "OK" or "Submit". No exclamation marks.
 | `var(--color-surface-critical-subtle)` | #fef2f2 | #450a0a | Error message backgrounds. |
 | `var(--color-surface-warning-subtle)` | #fffbeb | #451a03 | Warning message backgrounds. |
 | `var(--color-surface-success-subtle)` | #f0fdf4 | #052e16 | Success message backgrounds. |
-| `var(--color-surface-info-subtle)` | #eff6ff | #172554 | Informational message backgrounds. |
+| `var(--color-surface-info-subtle)` | #f5f3ff | #2e1065 | Informational message backgrounds. |
 | `var(--color-text-default)` | #0f172a | #f8fafc | Body and heading text. |
 | `var(--color-text-muted)` | #475569 | #94a3b8 | Secondary text, table headers, help text. |
 | `var(--color-text-on-interactive)` | #ffffff | #020617 | Text on primary and critical action surfaces. |
@@ -139,7 +139,7 @@ never "OK" or "Submit". No exclamation marks.
 | `var(--color-text-critical)` | #b91c1c | #f87171 | Error text and destructive ghost labels. |
 | `var(--color-text-warning)` | #92400e | #fcd34d | Warning text. |
 | `var(--color-text-success)` | #15803d | #4ade80 | Success text. |
-| `var(--color-text-info)` | #1d4ed8 | #93c5fd | Informational text. |
+| `var(--color-text-info)` | #6d28d9 | #c4b5fd | Informational text. |
 | `var(--color-icon-default)` | #334155 | #cbd5e1 | Default icon colour. |
 | `var(--color-icon-on-interactive)` | #ffffff | #020617 | Icons on primary and critical surfaces. |
 | `var(--color-border-default)` | #e2e8f0 | #334155 | Dividers, card and input borders. |
