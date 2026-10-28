@@ -73,6 +73,7 @@
   --radius-lg: 16px;
   --radius-full: 9999px;
   --space-0: 0px;
+  --space-2: 2px;
   --space-4: 4px;
   --space-8: 8px;
   --space-12: 12px;
@@ -144,6 +145,7 @@
   --space-compact: var(--space-8); /* Layout gap for tightly related items: toolbars, field groups. */
   --space-default: var(--space-16); /* Default layout gap between items in a Stack or Cluster. */
   --space-section: var(--space-32); /* Gap between page sections. */
+  --space-2xs: var(--space-2); /* Tight vertical padding inside small labels such as Badge. */
 }
 
 [data-theme="dark"] {
@@ -190,4 +192,5 @@
   --space-compact: var(--space-8); /* Layout gap for tightly related items: toolbars, field groups. */
   --space-default: var(--space-16); /* Default layout gap between items in a Stack or Cluster. */
   --space-section: var(--space-32); /* Gap between page sections. */
+  --space-2xs: var(--space-2); /* Tight vertical padding inside small labels such as Badge. */
 }

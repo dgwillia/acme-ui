@@ -42,6 +42,7 @@ spacing:
   compact: 8px
   default: 16px
   section: 32px
+  2xs: 2px
 radius:
   control: 9999px
   container: 16px
@@ -145,6 +146,7 @@ never "OK" or "Submit". No exclamation marks.
 | `var(--space-compact)` | 8px | 8px | Layout gap for tightly related items: toolbars, field groups. |
 | `var(--space-default)` | 16px | 16px | Default layout gap between items in a Stack or Cluster. |
 | `var(--space-section)` | 32px | 32px | Gap between page sections. |
+| `var(--space-2xs)` | 2px | 2px | Tight vertical padding inside small labels such as Badge. |
 | `var(--radius-control)` | 9999px | 9999px | Buttons, inputs, selects. Fully rounded (pill) controls. |
 | `var(--radius-container)` | 16px | 16px | Cards, dialogs, panels. |
 | `var(--radius-pill)` | 9999px | 9999px | Badges and tags. |
