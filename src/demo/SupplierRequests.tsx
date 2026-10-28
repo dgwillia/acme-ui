@@ -1,10 +1,23 @@
 // Demo screen — built by the agent using only @acme/ui exports (see AGENTS.md).
-// Components used: Page, Stack, Cluster, Card, Text, Button.
+// Components used: Page, Stack, Cluster, Card, Text, Button, Badge.
 import { useState } from 'react';
-import { Page, Stack, Cluster, Card, Text, Button } from '../index';
+import { Page, Stack, Cluster, Card, Text, Button, Badge } from '../index';
+import type { BadgeProps } from '../index';
 
 type Quality = 'measured' | 'estimated';
+type RequestStatus = 'not-requested' | 'sent' | 'replied';
 interface Supplier { id: string; name: string; category: string; emissions: number; quality: Quality; requested?: boolean }
+
+// Status → Badge tone, following the tone meanings in DESIGN.md and the Badge docs.
+const QUALITY: Record<Quality, { tone: BadgeProps['tone']; label: string }> = {
+  measured: { tone: 'success', label: 'Measured' },
+  estimated: { tone: 'warning', label: 'Estimated' },
+};
+const REQUEST: Record<RequestStatus, { tone: BadgeProps['tone']; label: string }> = {
+  'not-requested': { tone: 'neutral', label: 'Not requested' },
+  sent: { tone: 'info', label: 'Request sent' },
+  replied: { tone: 'success', label: 'Replied' },
+};
 
 const SUPPLIERS: Supplier[] = [
   { id: '1', name: 'Northfield Steel', category: 'Metals', emissions: 1240, quality: 'measured' },
@@ -35,6 +48,9 @@ export function SupplierRequests() {
     const name = suppliers.find(x => x.id === id)?.name;
     if (name) setTimeout(() => setReplies(r => (r.includes(name) ? r : [...r, name])), 3000);
   };
+
+  const requestStatus = (s: Supplier): RequestStatus =>
+    replies.includes(s.name) ? 'replied' : s.requested ? 'sent' : 'not-requested';
 
   const estimated = suppliers.filter(s => s.quality === 'estimated');
   const total = suppliers.reduce((sum, s) => sum + s.emissions, 0);
@@ -70,12 +86,14 @@ export function SupplierRequests() {
               <Stack gap="default">
                 <Stack gap="compact">
                   <Text variant="label-large" as="h2">{s.name}</Text>
+                  {/* Rule: estimated values must be labelled, never shown as if measured. */}
+                  <Cluster gap="compact">
+                    <Badge tone={QUALITY[s.quality].tone}>{QUALITY[s.quality].label}</Badge>
+                    <Badge tone={REQUEST[requestStatus(s)].tone}>{REQUEST[requestStatus(s)].label}</Badge>
+                  </Cluster>
                   <Text tone="muted">
                     {s.category} · {s.emissions.toLocaleString()} tCO2e · Q3
-                  </Text>
-                  {/* Rule: estimated values must be labelled, never shown as if measured. */}
-                  <Text variant="label-small" tone={s.quality === 'measured' ? 'success' : 'warning'}>
-                    {s.quality === 'measured' ? 'Measured data' : 'Estimated from spend data'}
+                    {s.quality === 'estimated' && ' · from spend data'}
                   </Text>
                 </Stack>
                 <Cluster gap="compact">
@@ -84,7 +102,6 @@ export function SupplierRequests() {
                       {sending === s.id ? 'Sending' : 'Request data'}
                     </Button>
                   )}
-                  {s.requested && <Button size="sm" disabled>Request sent</Button>}
                   <Button size="sm" variant="ghost">View supplier</Button>
                 </Cluster>
               </Stack>
