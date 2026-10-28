@@ -624,6 +624,21 @@
           }
         }
       }
+    },
+    "2xs": {
+      "$type": "dimension",
+      "$value": "{space.2}",
+      "$description": "Tight vertical padding inside small labels such as Badge.",
+      "$extensions": {
+        "com.figma": {
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-2xs)"
+          }
+        }
+      }
     }
   },
   "radius": {

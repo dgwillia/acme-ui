@@ -15,6 +15,21 @@
         }
       }
     },
+    "2": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2,
+        "unit": "px"
+      },
+      "$extensions": {
+        "com.figma": {
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--space-2)"
+          }
+        }
+      }
+    },
     "4": {
       "$type": "dimension",
       "$value": {
