@@ -16,6 +16,8 @@ export function SupplierRequests() {
   const [suppliers, setSuppliers] = useState(SUPPLIERS);
   const [sending, setSending] = useState<string | null>(null);
   const [dark, setDark] = useState(false);
+  // Suppliers that have replied to a data request, in the order they replied.
+  const [replies, setReplies] = useState<string[]>(['Northfield Steel']);
 
   const toggleTheme = () => {
     const next = !dark;
@@ -29,6 +31,9 @@ export function SupplierRequests() {
       setSuppliers(s => s.map(x => (x.id === id ? { ...x, requested: true } : x)));
       setSending(null);
     }, 900);
+    // Demo only: simulate the supplier replying a little later.
+    const name = suppliers.find(x => x.id === id)?.name;
+    if (name) setTimeout(() => setReplies(r => (r.includes(name) ? r : [...r, name])), 3000);
   };
 
   const estimated = suppliers.filter(s => s.quality === 'estimated');
@@ -86,6 +91,29 @@ export function SupplierRequests() {
             </Card>
           ))}
         </Stack>
+
+        <Card>
+          <Stack gap="default">
+            <Stack gap="compact">
+              <Text variant="label-large" as="h2">Supplier replies</Text>
+              <Text variant="heading-medium" as="p">{replies.length}</Text>
+            </Stack>
+            {replies.length > 0 ? (
+              <Stack gap="compact" as="ol" aria-label="Suppliers that replied, in reply order">
+                {replies.map(name => (
+                  <Text as="li" key={name}>{name}</Text>
+                ))}
+              </Stack>
+            ) : (
+              <Text tone="muted">No replies yet. Suppliers appear here once they respond.</Text>
+            )}
+            <Cluster gap="compact">
+              <Button size="sm" variant="ghost" disabled={replies.length === 0} onClick={() => setReplies([])}>
+                Clear replies
+              </Button>
+            </Cluster>
+          </Stack>
+        </Card>
       </Stack>
     </Page>
   );
