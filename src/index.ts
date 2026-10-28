@@ -1,4 +1,8 @@
 // @acme/ui — the only entry point screens and agents import from.
+// Load the brand font so every machine (and CI screenshots) renders Inter, as Figma does.
+// Only the weights our text styles use: 400 (Body) and 600 (Label, Heading).
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/600.css';
 import './styles/tokens.css';
 import './styles/base.css';
 
