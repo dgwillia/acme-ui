@@ -179,7 +179,7 @@
       },
       "info-subtle": {
         "$type": "color",
-        "$value": "{color.blue.950}",
+        "$value": "{color.violet.950}",
         "$description": "Informational message backgrounds.",
         "$extensions": {
           "com.figma": {
@@ -317,7 +317,7 @@
       },
       "info": {
         "$type": "color",
-        "$value": "{color.blue.300}",
+        "$value": "{color.violet.300}",
         "$description": "Informational text.",
         "$extensions": {
           "com.figma": {
