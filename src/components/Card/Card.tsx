@@ -11,7 +11,8 @@ export interface CardProps extends HTMLAttributes<HTMLElement> {
 /**
  * A raised container for a group of related content.
  * Slot contract: children should be a Stack (or Text, Cluster, Button).
- * Figma: "Card" (raised surface, default border, radius.container, space.xl padding).
+ * Figma: "Card" component with a `content` slot (= children). Raised surface, default border,
+ * border-width.default, radius.container, space.xl padding.
  */
 export function Card({ as: Tag = 'section', className, children, ...rest }: CardProps) {
   return (

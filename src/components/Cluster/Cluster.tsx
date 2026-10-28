@@ -16,7 +16,8 @@ export interface ClusterProps extends HTMLAttributes<HTMLElement> {
 /**
  * Horizontal layout that wraps. Use for button groups, toolbars and tag lists.
  * Fills the available width; children keep their natural size.
- * Figma: "Primitives/Cluster" (gap = compact | default).
+ * Figma: no component. Use a horizontal, wrapping, vertically centred auto layout frame with gap bound to
+ * space/compact|default, named "Cluster gap=…".
  */
 export function Cluster({ gap = 'default', as: Tag = 'div', className, children, ...rest }: ClusterProps) {
   return (
