@@ -43,7 +43,7 @@ spacing:
   default: 16px
   section: 32px
 radius:
-  control: 8px
+  control: 9999px
   container: 16px
   pill: 9999px
 typography:
@@ -144,7 +144,7 @@ never "OK" or "Submit". No exclamation marks.
 | `var(--space-compact)` | 8px | 8px | Layout gap for tightly related items: toolbars, field groups. |
 | `var(--space-default)` | 16px | 16px | Default layout gap between items in a Stack or Cluster. |
 | `var(--space-section)` | 32px | 32px | Gap between page sections. |
-| `var(--radius-control)` | 8px | 8px | Buttons, inputs, selects. |
+| `var(--radius-control)` | 9999px | 9999px | Buttons, inputs, selects. Fully rounded (pill) controls. |
 | `var(--radius-container)` | 16px | 16px | Cards, dialogs, panels. |
 | `var(--radius-pill)` | 9999px | 9999px | Badges and tags. |
 <!-- table:end -->

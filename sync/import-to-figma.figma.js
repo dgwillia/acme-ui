@@ -6,7 +6,8 @@
 // component bound to them in Figma updates too. It only CREATES variables that
 // are new in code; it never deletes (removals are reported for a human).
 
-const SNAPSHOT = __SNAPSHOT__;
+const SNAPSHOT = __SNAPSHOT__;   // full (sync/to-figma.json) or partial (sync/to-figma.diff.json)
+const PARTIAL = SNAPSHOT.partial === true;
 
 const hex = h => { const c = h.replace('#', ''); return { r: parseInt(c.slice(0, 2), 16) / 255, g: parseInt(c.slice(2, 4), 16) / 255, b: parseInt(c.slice(4, 6), 16) / 255 }; };
 const cols = await figma.variables.getLocalVariableCollectionsAsync();
@@ -51,6 +52,6 @@ for (const [name, type, l, d, scopes, desc] of SNAPSHOT.semantic) {
 }
 
 const inCode = new Set([...SNAPSHOT.primitives.map(p => p[0]), ...SNAPSHOT.semantic.map(s => s[0])]);
-const onlyInFigma = all.filter(v => (v.variableCollectionId === prim.id || v.variableCollectionId === sem.id) && !inCode.has(v.name)).map(v => v.name);
+const onlyInFigma = PARTIAL ? [] : all.filter(v => (v.variableCollectionId === prim.id || v.variableCollectionId === sem.id) && !inCode.has(v.name)).map(v => v.name);
 
 return { changed, created, onlyInFigma, note: onlyInFigma.length ? 'Not deleted — review by hand' : 'In sync' };
