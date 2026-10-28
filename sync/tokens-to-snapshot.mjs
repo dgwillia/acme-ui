@@ -5,7 +5,7 @@
 // sync/import-to-figma.figma.js to update Figma variables.
 //
 // Usage: node sync/tokens-to-snapshot.mjs
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 
 const root = new URL('..', import.meta.url).pathname;
 const read = rel => JSON.parse(readFileSync(root + rel, 'utf8'));
@@ -21,7 +21,9 @@ function walk(tree, path = [], out = []) {
 const ref = s => '{' + s.slice(1, -1).replace(/\./g, '/') + '}';
 
 const primitives = [];
-for (const fam of ['color', 'space', 'radius']) {
+// Every primitive family file except typography (text styles sync separately).
+const fams = readdirSync(root + 'tokens/primitives').filter(f => f.endsWith('.tokens.json') && f !== 'typography.tokens.json').map(f => f.replace('.tokens.json', ''));
+for (const fam of fams) {
   for (const [name, t] of walk(read(`tokens/primitives/${fam}.tokens.json`))) {
     primitives.push([name, t.$type === 'color' ? t.$value.hex : t.$value.value]);
   }

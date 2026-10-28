@@ -30,10 +30,11 @@ function figmaExt(name, scopes) {
   return { 'com.figma': { scopes, codeSyntax: { WEB: `var(${cssName(name)})` } } };
 }
 
-// ---- Primitives: one file per family
-const families = { color: {}, space: {}, radius: {} };
+// ---- Primitives: one file per family (any family Figma has: color, space, radius, border-width, ...)
+const families = {};
 for (const [name, value] of snap.primitives) {
   const family = name.split('/')[0];
+  families[family] ??= {};
   const isColor = typeof value === 'string';
   setDeep(families[family], toPath(name), {
     $type: isColor ? 'color' : 'dimension',
@@ -74,9 +75,7 @@ const write = (rel, obj) => {
 };
 
 const files = [
-  write('tokens/primitives/color.tokens.json', families.color),
-  write('tokens/primitives/space.tokens.json', families.space),
-  write('tokens/primitives/radius.tokens.json', families.radius),
+  ...Object.entries(families).map(([f, tree]) => write(`tokens/primitives/${f}.tokens.json`, tree)),
   write('tokens/primitives/typography.tokens.json', typography),
   write('tokens/semantic/light.tokens.json', light),
   write('tokens/semantic/dark.tokens.json', dark),

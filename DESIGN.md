@@ -47,6 +47,8 @@ radius:
   control: 9999px
   container: 16px
   pill: 9999px
+border-width:
+  default: 1px
 typography:
   label-small: { family: "Inter", weight: 600, size: 12px, line-height: 16px }
   label-medium: { family: "Inter", weight: 600, size: 14px, line-height: 20px }
@@ -163,4 +165,5 @@ never "OK" or "Submit". No exclamation marks.
 | `var(--radius-control)` | 9999px | 9999px | Buttons, inputs, selects. Fully rounded (pill) controls. |
 | `var(--radius-container)` | 16px | 16px | Cards, dialogs, panels. |
 | `var(--radius-pill)` | 9999px | 9999px | Badges and tags. |
+| `var(--border-width-default)` | 1px | 1px | Default border width for controls and containers (Button, Card, inputs). |
 <!-- table:end -->
