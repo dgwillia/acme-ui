@@ -64,7 +64,8 @@ The token section above and the table below are **generated** from `/tokens`
 ## Visual theme
 
 Calm, precise, evidence-first. Dense but never cramped: analysts scan, executives skim.
-Emerald is the brand colour and signals action. It is never decoration.
+Blue is the brand colour and signals action. It is never decoration.
+Emerald is reserved for data: measured and estimated values.
 
 ## Building blocks
 
