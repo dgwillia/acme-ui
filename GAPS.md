@@ -44,6 +44,7 @@ These are by design. The parity check (`npm run parity`) treats them as expected
 | Interim rule "info is not next to actions" now outdated (info is violet) | PR #10 | Relax it in DESIGN.md |
 | Code Connect not published (needs a Figma Organization plan) | PR #7 | Template ready in `figma/Badge.figma.ts` |
 
-**Closed:** token sync status in CI (`npm run figma:sync-status`); Figma descriptions generated from code (`npm run figma:descriptions`).
 | Figma component manifest is exported by hand, so CI only sees Figma as of the last export | Parity check | Run the export in every component PR; automate with the Figma REST API on an Enterprise plan |
 | Figma changes made without an export go unnoticed (tokens and components) | Sync design | Scheduled agent export, or Enterprise REST API |
+
+**Closed:** token sync status in CI (`npm run figma:sync-status`); Figma descriptions generated from code (`npm run figma:descriptions`).
