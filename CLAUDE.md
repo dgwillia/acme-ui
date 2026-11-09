@@ -17,6 +17,9 @@ Figma file: https://www.figma.com/design/5d9HHWsYninfYBCiPrWpEw
 3. Re-run the export checksum in Figma; it must equal the expected checksum. Then copy `sync/expected-figma-snapshot.json` to `sync/figma-snapshot.json`.
 4. Report `changed`, `created` and anything listed in `onlyInFigma` (never deleted automatically).
 
+`npm run figma:sync-status` tells you whether Figma is behind the code's tokens. CI runs it: a warning
+on pull requests (sync after merging), a failure on `main` (sync now).
+
 ## Component parity (code → Figma, deterministic)
 Code leads for components. To check Figma still mirrors it:
 1. Run `sync/export-components.figma.js` with `use_figma` (read-only). Save the result to
@@ -28,3 +31,11 @@ Code leads for components. To check Figma still mirrors it:
 4. Figma gotcha: a component set's **default variant is the one at the top-left** of the set, not the
    first in the layer list. To change a default, move that variant's column or row to the top-left.
 5. In a live library, rename or repair variants; never delete one that instances may use.
+
+## Component descriptions (code → Figma, generated)
+Figma component descriptions are generated from the code (JSDoc, props, Storybook page). Never edit
+them in Figma.
+1. `npm run build-storybook && npm run figma:descriptions` writes `sync/figma-descriptions.json`.
+2. Run `sync/apply-descriptions.figma.js` with `use_figma`, replacing `__DESCRIPTIONS__` with that JSON.
+3. Re-export the component manifest (above) and run `npm run parity`. Figma returns descriptions
+   HTML-escaped (`'` as `&#39;`, `"` as `&quot;`); the parity check decodes them.

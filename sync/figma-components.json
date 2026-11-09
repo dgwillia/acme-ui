@@ -44,21 +44,24 @@
           ],
           "default": "false"
         }
-      }
+      },
+      "description": "import { Button } from &#39;@acme/ui&#39;\n\nTriggers an action. Use for the actions on a page or in a form.\nDo NOT use for navigation: use a link.\n\nFigma: &quot;Button&quot; component set (variant × size × disabled; label, loading, leadingIcon).\nTokens: color.surface.interactive, color.text.on-interactive, color.border.strong,\nradius.control, border-width.default, space.*, font.label-*.\n\nProps\n• variant?: primary | secondary | ghost (default primary)\n    Visual emphasis.\n    - primary: the single most important action in a view. Max one per view.\n    - secondary: other actions, e.g. Cancel.\n    - ghost: low-emphasis actions inside tables, cards and toolbars.\n• size?: sm | md | lg (default md)\n    Control size. md is the default; sm for dense tables and toolbars; lg for hero actions.\n• disabled?: true | false (default false)\n    Prevents interaction and shows the disabled style. Prefer explaining why nearby.\n• loading?: true | false (default false)\n    Shows a spinner and blocks clicks while an async action runs. Keep a label such as &quot;Saving&quot;.\n• leadingIcon?\n    Optional icon shown before the label.\n• children → &quot;label&quot;\n    The label. Say what happens (&quot;Save changes&quot;), not &quot;OK&quot;.\n\nStorybook: Components/Button\n\nGenerated from code. Edit the JSDoc in the component, not this text."
     },
     "Card": {
       "properties": {
         "content": {
           "type": "SLOT"
         }
-      }
+      },
+      "description": "import { Card } from &#39;@acme/ui&#39;\n\nA raised container for a group of related content.\nSlot contract: children should be a Stack (or Text, Cluster, Button).\nFigma: &quot;Card&quot; component with a content slot (= children). Raised surface, default border,\nborder-width.default, radius.container, space.xl padding.\n\nProps\n• children → &quot;content&quot;\n    Content. Put a Stack inside to space it.\n\nStorybook: Components/Card\n\nGenerated from code. Edit the JSDoc in the component, not this text."
     },
     "Page": {
       "properties": {
         "content": {
           "type": "SLOT"
         }
-      }
+      },
+      "description": "import { Page } from &#39;@acme/ui&#39;\n\nOuter page container: centres content to a readable width and applies page padding\n(space.2xl). Every screen starts with one Page.\nFigma: &quot;Page&quot; component with a content slot (= children). Max width 960, space.2xl padding.\nIn Figma, lay out the content with auto layout frames, gap bound to space/compact|default|section\n(vertical = Stack, horizontal + wrap + centred = Cluster). Figma has no Stack or Cluster component.\nAdded after the first agent build reported it as a gap in the system.\n\nProps\n• children → &quot;content&quot;\n    Page content. Usually a Stack with gap=&quot;section&quot;.\n\nStorybook: Layout/Page\n\nGenerated from code. Edit the JSDoc in the component, not this text."
     },
     "Badge": {
       "properties": {
@@ -84,7 +87,8 @@
           ],
           "default": "neutral"
         }
-      }
+      },
+      "description": "import { Badge } from &#39;@acme/ui&#39;\n\nA short, non-interactive status label, e.g. &quot;Overdue&quot; or &quot;Received&quot;.\nDo NOT use as a button or link, and never without a text label.\n\nAdapted from shadcn/ui&#39;s Badge (MIT): same structure and icon slot,\nrestyled with Acme tokens. shadcn&#39;s secondary, outline, ghost and link\nvariants and the render-as-link option are intentionally not included.\n\nFigma: &quot;Badge&quot; component set (tone; label, leadingIcon).\nTokens: color.surface.*-subtle, color.surface.subtle, color.text.*,\nradius.pill, space.2xs, space.sm, space.xs, font.label-small.\n\nProps\n• tone?: neutral | info | success | warning | critical (default neutral)\n    Meaning of the status. One tone per meaning, used consistently:\n    - neutral: everything else, including pending statuses (draft, request sent).\n    - info: informational messages. Not next to actions: it reads as clickable. Use neutral for pending statuses.\n    - success: done or verified (supplier replied, measured data).\n    - warning: needs attention soon (due soon, estimated data).\n    - critical: overdue, failed or blocked.\n• leadingIcon?\n    Optional icon shown before the label. Sized to the text (12px). Decorative only.\n• children → &quot;label&quot;\n    The label. Always required: colour is never the only signal. Sentence case, two or three words\n    that make sense read on their own (&quot;Estimated data&quot;, not &quot;Estimated&quot;).\n\nStorybook: Components/Badge\n\nGenerated from code. Edit the JSDoc in the component, not this text."
     }
   }
 }

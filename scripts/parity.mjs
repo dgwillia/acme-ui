@@ -9,6 +9,7 @@
 //
 // Usage: npm run parity [-- path/to/components.json]   Exit code 1 if anything is red.
 import { readFileSync, existsSync } from 'node:fs';
+import { describe } from './figma-descriptions.mjs';
 
 const root = new URL('..', import.meta.url).pathname;
 const codePath = process.argv[2] ?? root + 'storybook-static/manifests/components.json';
@@ -86,6 +87,10 @@ for (const comp of Object.values(code)) {
     }
   }
   for (const k of Object.keys(fp)) if (!used.has(k)) bad(name, `${k}: in Figma but not a code prop`);
+  // Figma returns descriptions HTML-escaped (' as &#39;, " as &quot;), so decode before comparing.
+  const decode = s => (s ?? '').replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+  if (decode(f.description) === describe(comp, cfg)) ok(name, 'description: generated from code, up to date');
+  else bad(name, 'description: out of date. Run `npm run figma:descriptions`, then sync/apply-descriptions.figma.js');
 }
 
 const icon = r => (r.ok === true ? '✅' : r.ok === false ? '❌' : '➖');
