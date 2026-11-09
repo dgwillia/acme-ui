@@ -15,6 +15,7 @@
     "typecheck": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o storybook-static",
+    "parity": "node scripts/parity.mjs",
     "check": "npm run tokens:build && npm run design-md:build && git diff --exit-code DESIGN.md src/styles/tokens.css && npm run lint && npm run typecheck"
   },
   "dependencies": {

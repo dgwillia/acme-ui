@@ -1,0 +1,18 @@
+{
+  "$comment": "Rules for the component parity check (scripts/parity.mjs). Code leads for components: Figma must mirror these props. Every exception here must also be listed in GAPS.md.",
+  "children": {
+    "Button": "label",
+    "Badge": "label",
+    "Card": "content",
+    "Page": "content"
+  },
+  "codeOnlyComponents": {
+    "Stack": "Figma has no Stack component: use an auto layout frame with the gap bound to space/compact|default|section.",
+    "Cluster": "Figma has no Cluster component: use a horizontal, wrapping, centred auto layout frame with the gap bound to a space token.",
+    "Text": "Figma uses text styles, not a component. Each Text variant is a text style of the same name."
+  },
+  "codeOnlyProps": {
+    "as": "Which HTML element renders (section, ul, h2). Semantics only; nothing to show in Figma.",
+    "type": "Button's HTML type (button, submit). Behaviour only."
+  }
+}
