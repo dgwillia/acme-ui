@@ -31,7 +31,6 @@ These are by design. The parity check (`npm run parity`) treats them as expected
 ## 3. Needs a human check
 - **Meaning, not syntax.** TypeScript allows any `tone`; only review catches `info` used for something overdue. Rules: DESIGN.md, Status section.
 - **Label wording.** Sentence case, makes sense on its own ("Estimated data", not "Estimated").
-- **Component descriptions.** Written twice today (JSDoc in code, description in Figma). Keep them in step by hand until they are generated from code.
 - **Visual match.** The parity check compares props, not pixels. After a visual change, compare a Storybook screenshot with the Figma component.
 
 ## 4. Open system gaps
@@ -43,6 +42,8 @@ These are by design. The parity check (`npm run parity`) treats them as expected
 | No grid or columns layout | Agent, Home screen | Wait until a screen needs two columns |
 | No date and time format rule | Agent, Home screen | Add to DESIGN.md ("Today, 08:12", "Mon 26 Oct") |
 | Interim rule "info is not next to actions" now outdated (info is violet) | PR #10 | Relax it in DESIGN.md |
-| Nothing records whether the token sync to Figma has run | Dan's Claude Code | CI check: fail when `/tokens` differs from `sync/figma-snapshot.json` |
 | Code Connect not published (needs a Figma Organization plan) | PR #7 | Template ready in `figma/Badge.figma.ts` |
-| Figma component manifest is exported by hand | This file | Run the export as part of every component PR |
+
+**Closed:** token sync status in CI (`npm run figma:sync-status`); Figma descriptions generated from code (`npm run figma:descriptions`).
+| Figma component manifest is exported by hand, so CI only sees Figma as of the last export | Parity check | Run the export in every component PR; automate with the Figma REST API on an Enterprise plan |
+| Figma changes made without an export go unnoticed (tokens and components) | Sync design | Scheduled agent export, or Enterprise REST API |

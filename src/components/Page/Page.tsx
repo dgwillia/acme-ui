@@ -10,6 +10,8 @@ export interface PageProps {
  * Outer page container: centres content to a readable width and applies page padding
  * (space.2xl). Every screen starts with one Page.
  * Figma: "Page" component with a `content` slot (= children). Max width 960, space.2xl padding.
+ * In Figma, lay out the content with auto layout frames, gap bound to space/compact|default|section
+ * (vertical = Stack, horizontal + wrap + centred = Cluster). Figma has no Stack or Cluster component.
  * Added after the first agent build reported it as a gap in the system.
  */
 export function Page({ children }: PageProps) {

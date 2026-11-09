@@ -2,7 +2,8 @@
 //
 // Lists every published library component on the "Components" page with its properties
 // (name, type, allowed values, default), in a shape the parity check can compare with
-// Storybook's component manifest. Save the returned object to sync/figma-components.json.
+// Storybook's component manifest, plus each component's description. Save the returned
+// object to sync/figma-components.json.
 
 const page = figma.root.children.find(p => p.name === 'Components');
 await figma.setCurrentPageAsync(page);
@@ -19,6 +20,6 @@ for (const node of page.children) {
     if (def.type !== 'SLOT' && def.type !== 'INSTANCE_SWAP') p.default = def.defaultValue;
     properties[clean(key)] = p;
   }
-  components[node.name] = { properties };
+  components[node.name] = { properties, description: node.description };
 }
 return { fileKey: figma.fileKey, components };

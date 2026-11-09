@@ -26,6 +26,9 @@ jobs:
       - name: Run the design system check
         run: npm run check
 
+      - name: Figma token sync status (warns on PRs, fails on main)
+        run: npm run figma:sync-status
+
       - name: Build Storybook (writes the component manifest)
         run: npm run build-storybook -- --quiet
 

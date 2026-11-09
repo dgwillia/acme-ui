@@ -32,5 +32,6 @@ This repo is the Acme design system (`@acme/ui`) plus a demo app.
 ## When finished
 Run `npm run check` (rebuilds tokens and DESIGN.md, then lint and type check).
 If you changed a component's props, also run `npm run build-storybook && npm run parity`
-(compares code with Figma) and update the Figma component to match.
+(compares code with Figma) and update the Figma component to match. If you changed a component's
+JSDoc, regenerate its Figma description (`npm run figma:descriptions`, see CLAUDE.md).
 List the components you used in the PR description.
