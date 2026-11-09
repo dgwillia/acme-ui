@@ -1,7 +1,15 @@
 # Working in acme-ui (for any AI coding agent)
 
 This repo is the Acme design system (`@acme/ui`) plus a demo app.
-Tokens are synced from Figma; components mirror the Figma library one to one.
+
+## Source of truth (read this first)
+- **Tokens: Figma leads.** Colour, spacing, radius, border width and text styles are decided in Figma
+  variables and synced into `/tokens`. A token change made in code is the exception: a reviewed PR,
+  then pushed back to Figma (see CLAUDE.md).
+- **Components: code leads. Figma mirrors it.** Props, allowed values, defaults and states are defined
+  in `src/components`. If Figma and code disagree about a component, Figma is wrong and gets fixed.
+- **Gaps:** anything one side can't express is listed in `GAPS.md`. Check it before reporting a
+  difference as a bug, and add to it when you find something new.
 
 ## Before any UI work
 1. Read `DESIGN.md` (rules, rationale and the token table).
@@ -23,4 +31,6 @@ Tokens are synced from Figma; components mirror the Figma library one to one.
 
 ## When finished
 Run `npm run check` (rebuilds tokens and DESIGN.md, then lint and type check).
+If you changed a component's props, also run `npm run build-storybook && npm run parity`
+(compares code with Figma) and update the Figma component to match.
 List the components you used in the PR description.

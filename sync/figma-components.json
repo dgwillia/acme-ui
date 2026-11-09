@@ -1,0 +1,90 @@
+{
+  "fileKey": "5d9HHWsYninfYBCiPrWpEw",
+  "components": {
+    "Button": {
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "default": "Button"
+        },
+        "loading": {
+          "type": "BOOLEAN",
+          "default": false
+        },
+        "hasLeadingIcon": {
+          "type": "BOOLEAN",
+          "default": false
+        },
+        "leadingIcon": {
+          "type": "INSTANCE_SWAP"
+        },
+        "variant": {
+          "type": "VARIANT",
+          "options": [
+            "primary",
+            "secondary",
+            "ghost"
+          ],
+          "default": "primary"
+        },
+        "size": {
+          "type": "VARIANT",
+          "options": [
+            "sm",
+            "md",
+            "lg"
+          ],
+          "default": "md"
+        },
+        "disabled": {
+          "type": "VARIANT",
+          "options": [
+            "false",
+            "true"
+          ],
+          "default": "false"
+        }
+      }
+    },
+    "Card": {
+      "properties": {
+        "content": {
+          "type": "SLOT"
+        }
+      }
+    },
+    "Page": {
+      "properties": {
+        "content": {
+          "type": "SLOT"
+        }
+      }
+    },
+    "Badge": {
+      "properties": {
+        "label": {
+          "type": "TEXT",
+          "default": "Status"
+        },
+        "hasLeadingIcon": {
+          "type": "BOOLEAN",
+          "default": false
+        },
+        "leadingIcon": {
+          "type": "INSTANCE_SWAP"
+        },
+        "tone": {
+          "type": "VARIANT",
+          "options": [
+            "neutral",
+            "info",
+            "success",
+            "warning",
+            "critical"
+          ],
+          "default": "neutral"
+        }
+      }
+    }
+  }
+}

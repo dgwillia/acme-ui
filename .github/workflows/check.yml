@@ -25,3 +25,9 @@ jobs:
 
       - name: Run the design system check
         run: npm run check
+
+      - name: Build Storybook (writes the component manifest)
+        run: npm run build-storybook -- --quiet
+
+      - name: Component parity, code vs Figma
+        run: npm run parity
