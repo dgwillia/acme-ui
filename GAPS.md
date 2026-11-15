@@ -45,5 +45,6 @@ These are by design. The parity check (`npm run parity`) treats them as expected
 | Code Connect not published (needs a Figma Organization plan) | PR #7 | Template ready in `figma/Badge.figma.ts` |
 | Figma component manifest is exported by hand, so CI only sees Figma as of the last export | Parity check | Run the export in every component PR; automate with the Figma REST API on an Enterprise plan |
 | Figma changes made without an export go unnoticed (tokens and components) | Sync design | Scheduled agent export, or Enterprise REST API |
+| No motion tokens (duration, easing). The spinner's 0.8s is hard-coded | DESIGN.md motion rules | Add duration and easing variables in Figma when a second animation is needed |
 
 **Closed:** token sync status in CI (`npm run figma:sync-status`); Figma descriptions generated from code (`npm run figma:descriptions`).

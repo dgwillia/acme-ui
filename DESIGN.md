@@ -64,6 +64,11 @@ The brief for anyone, person or agent, building interfaces with `@acme/ui`.
 The token section above and the table below are **generated** from `/tokens`
 (which are synced from Figma). Everything else is written by the design team.
 
+## Design thesis
+
+Evidence first: every screen shows what is known, how sure we are, and what to do next, and nothing competes
+with that.
+
 ## Visual theme
 
 Calm, precise, evidence-first. Dense but never cramped: analysts scan, executives skim.
@@ -106,6 +111,17 @@ Emerald is reserved for charts and figures of measured and estimated data (the `
 - `color.data.*` tokens are for charts and figures only. A data-quality status label uses Badge tones:
   measured → `success` ("Measured data"), estimated → `warning` ("Estimated data").
 - Always state the unit and the period ("1,240 tCO2e · Q3").
+
+## Motion
+
+- Motion explains a change of state. It is never decoration.
+- The only animation today is the Button `loading` spinner. Don't add others in feature code. If a screen
+  needs one, report it as a gap.
+- Nothing moves on its own except a loading indicator. No auto-playing carousels, no attention-seeking pulses.
+- Respect the user's reduced-motion setting (`prefers-reduced-motion`). A loading spinner may keep turning,
+  because it is the only sign that something is happening.
+- There are no motion tokens yet (duration, easing). When a second animation is needed, add them in Figma first,
+  like any other token.
 
 ## Voice
 
